@@ -1,5 +1,7 @@
 import matplotlib.pyplot as plt
+from matplotlib.backends.backend_pdf import PdfPages
 from transform.transform import transform_report_one
+import matplotlib
 
 def construct():
 
@@ -7,7 +9,5 @@ def construct():
     plt.pie(values, labels=labels, autopct='%1.1f%%')
     plt.axis("equal")
     plt.title("Courses by schedule")
-    plt.show()
-    
-    # don't function yet
-    # return plt.figure()
+
+    return plt

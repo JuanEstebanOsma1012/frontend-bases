@@ -1,44 +1,43 @@
 from matplotlib.backends.backend_pdf import PdfPages
-from construct.construct_1 import construct as construct_1
-from construct.construct_2 import construct as construct_2
-from construct.construct_3 import construct as construct_3
-from construct.construct_4 import construct as construct_4
-from construct.construct_5 import construct as construct_5
-from construct.construct_6 import construct as construct_6
-from construct.construct_7 import construct as construct_7
+from construct.construct_1 import construct as c1
+from construct.construct_2 import construct as c2
+from construct.construct_3 import construct as c3
+from construct.construct_4 import construct as c4
+from construct.construct_5 import construct as c5
+from construct.construct_6 import construct as c6
+from construct.construct_7 import construct as c7
 
+import matplotlib.pyplot as plt
+from transform.transform import transform_report_one
+import matplotlib
 
-def create_report_one():
-    with PdfPages(f"report1.pdf") as pdf:
-        pdf.savefig(construct_1())
-        pdf.close()
+matplotlib.use("agg")
 
-def create_report_two():
-    with PdfPages("report2.pdf") as pdf:
-        pdf.savefig(construct_2())
-        pdf.close()
+def create_report(selected_report, export_type):
 
-def create_report_three():
-    with PdfPages("report3.pdf") as pdf:
-        pdf.savefig(construct_3())
-        pdf.close()
+    filename = f'reports/{selected_report}.{export_type}'
 
-def create_report_four():
-    with PdfPages("report4.pdf") as pdf:
-        pdf.savefig(construct_4())
-        pdf.close()
+    if selected_report == "report1":
+        c1().savefig(filename)
 
-def create_report_five():
-    with PdfPages("report5.pdf") as pdf:
-        pdf.savefig(construct_5())
-        pdf.close()
+    elif selected_report == "report2":
+        c2().savefig(filename)
 
-def create_report_six():
-    with PdfPages("report6.pdf") as pdf:
-        pdf.savefig(construct_6())
-        pdf.close()
+    elif selected_report == "report3":
+        c3().savefig(filename)
 
-def create_report_seven():
-    with PdfPages("report7.pdf") as pdf:
-        pdf.savefig(construct_7())
-        pdf.close()
+    elif selected_report == "report4":
+        c4().savefig(filename)
+
+    elif selected_report == "report5":
+        c5().savefig(filename)
+
+    elif selected_report == "report6":
+        c6().savefig(filename)
+
+    elif selected_report == "report7":
+        c7().savefig(filename)
+
+    else:
+        return
+            
