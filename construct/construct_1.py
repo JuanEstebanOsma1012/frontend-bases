@@ -8,6 +8,6 @@ def construct():
     labels, values = transform_report_one()
     plt.pie(values, labels=labels, autopct='%1.1f%%')
     plt.axis("equal")
-    plt.title("Courses by schedule")
+    plt.title("Cursos por horario (%)", fontsize=20)
 
     return plt

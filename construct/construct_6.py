@@ -7,4 +7,9 @@ def construct():
 
     plt.plot(x_labels, y_labels, marker="o")
     plt.gcf().set_size_inches(9, 7)
-    plt.show()
+
+    plt.title("Cantidad de quices puestos a lo largo del tiempo (basado en su fecha de finalizacion)")
+    plt.xlabel("Meses")
+    plt.ylabel("Cantidad de quices")
+    
+    return plt

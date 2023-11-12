@@ -8,4 +8,8 @@ def construct():
     plt.plot(x_labels, y_labels, marker="o")
     plt.ylim(0, 5.0)
     plt.gcf().set_size_inches(9, 7)
-    plt.show()
+
+    plt.title("Promedio de calificación por mes")
+    plt.xlabel("Meses")
+    plt.ylabel("Promedio de calificación")
+    return plt
