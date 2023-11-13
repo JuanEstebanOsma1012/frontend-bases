@@ -27,7 +27,7 @@ def create_report(selected_report, export_type):
         c3().savefig(filename)
 
     elif selected_report == "report4":
-        c4().savefig(filename)
+        c4().savefig(filename, dpi=300)
 
     elif selected_report == "report5":
         c5().savefig(filename)
@@ -36,7 +36,7 @@ def create_report(selected_report, export_type):
         c6().savefig(filename)
 
     elif selected_report == "report7":
-        c7().savefig(filename)
+        c7().savefig(filename, bbox_inches='tight', pad_inches=0.5)
 
     else:
         return

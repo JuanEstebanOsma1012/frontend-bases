@@ -9,8 +9,8 @@ def construct():
     fig, ax = plt.subplots()
     ax.imshow(values)
 
-    ax.set_xticks(np.arange(len(x_labels)), labels=x_labels)
-    ax.set_yticks(np.arange(len(y_labels)), labels=y_labels)
+    ax.set_xticks(np.arange(len(x_labels)), labels=x_labels, fontsize=8)
+    ax.set_yticks(np.arange(len(y_labels)), labels=y_labels, fontsize=8)
 
     plt.setp(ax.get_xticklabels(), rotation=45, ha="right",
             rotation_mode="anchor")

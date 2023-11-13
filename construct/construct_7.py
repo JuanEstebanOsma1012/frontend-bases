@@ -12,6 +12,8 @@ def construct():
     axis.set_xlabel("Profesores")
     axis.set_title("Cantidad de bancos y preguntas promedio por profesor")
 
+    plt.tick_params(axis='x', which='major', labelsize=8, rotation=90)
+
     axis2 = axis.twinx()
     axis2.plot(x_labels, right_y_labels, color="red", marker="o", ms=5)
     axis2.set_ylabel("Cantidad de preguntas promedio por banco", color="red")

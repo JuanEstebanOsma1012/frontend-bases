@@ -8,6 +8,10 @@ def transform_report_one():
     labels = []
     values = []
     for block in plain_data:
+        
+        if block["n_grupos"] == 0:
+            continue
+        
         labels.append(f'{block["hora_inicio"]}-{block["hora_fin"]}')
         values.append(block["n_grupos"])
 

@@ -2,7 +2,7 @@ import requests as req
 import json as json
 
 endPointsAvailable = 7
-domain = "localhost:8080"
+domain = "http://localhost:8083/administrador"
 
 test = {
     "test_data_1": '''[
@@ -85,9 +85,11 @@ test = {
 }
 
 def load_report_data(number: int):
+    
     if number > endPointsAvailable: return
 
-    #res = req.get("{domain}/report{number}")
-    #return json.load(res.text)
+    res = req.get(f"{domain}/reporte{number}")
+    return json.loads(res.text)
 
+def load_test_data(number: int):
     return json.loads(test[f"test_data_{number}"])
