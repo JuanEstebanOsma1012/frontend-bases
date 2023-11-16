@@ -1,5 +1,5 @@
-from mainGUI.main_interface_construct import initialize as main_initialize
+from mainGUI.main import MainGUI
 
 if __name__ == "__main__":
-    main_initialize()
+    MainGUI()
 
